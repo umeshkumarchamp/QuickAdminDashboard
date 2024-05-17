@@ -45,33 +45,34 @@ const Header = () => {
                 )}
 
                 {/* Header */}
-                <div className="relative bg-gradient-to-r from-yellow-400 via-red-400 to-red-500 text-white h-16 md:h-16 flex items-center justify-between px-4 md:px-8 shadow-md">
-                    <div className="absolute inset-0 opacity-70 z-0"></div>
+                <div className="relative bg-gradient-to-r from-[#ff416c] to-[#ff4b2b] text-white h-14 md:h-14 flex items-center justify-between px-4 md:px-8 shadow-md">
+                    <div className="absolute inset-1 opacity-70 z-0"></div>
                     {isMobile && (
-                        <button className="md:hidden text-gray-800 focus:outline-none z-10" onClick={toggleSidebar}>
+                        <button className="md:hidden text-white focus:outline-none z-50 flex items-center justify-center rounded-full w-10 h-10" onClick={toggleSidebar}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 6h16M4 12h16m-7 6h7" />
                             </svg>
                         </button>
                     )}
-                    <h2 className="text-xl font-bold text-gray-800 z-10">Quick Computer Institute</h2>
+
+
+                    <h2 className="text-xl font-bold text-white z-10">Dashboard</h2>
                     <div className="flex items-center z-10 space-x-4">
                         {/* Search Bar (Desktop Only) */}
                         {!isMobile && (
                             <input
                                 type="text"
                                 placeholder="Search..."
-                                className="hidden md:block px-4 py-2 border rounded-md"
+                                className="hidden md:block px-4 py-1 border rounded-md"
                             />
                         )}
                         {/* Notification Icon */}
-                        {!isMobile && (
-                            <button className="hidden md:block text-gray-800 focus:outline-none">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-9.33-5.102A5.985 5.985 0 006 11v3.159c0 .538-.214 1.055-.595 1.437L4 17h5m1 4h4m-4-4v1a1 1 0 01-1 1h0a1 1 0 01-1-1v-1m6 0v1a1 1 0 01-1 1h0a1 1 0 01-1-1v-1" />
-                                </svg>
-                            </button>
-                        )}
+                        <button className="text-gray-800 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 00-9.33-5.102A5.985 5.985 0 006 11v3.159c0 .538-.214 1.055-.595 1.437L4 17h5m1 4h4m-4-4v1a1 1 0 01-1 1h0a1 1 0 01-1-1v-1m6 0v1a1 1 0 01-1 1h0a1 1 0 01-1-1v-1" />
+                            </svg>
+                            {/* Change the SVG to the notification icon */}
+                        </button>
                         <Menu as="div" className="relative">
                             <Menu.Button className="focus:outline-none">
                                 <img src="https://e7.pngegg.com/pngimages/980/304/png-clipart-computer-icons-user-profile-avatar-heroes-silhouette.png" alt="Profile" className="w-10 h-10 rounded-full cursor-pointer" />
